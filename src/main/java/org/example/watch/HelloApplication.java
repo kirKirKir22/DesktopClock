@@ -6,6 +6,7 @@ import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.BackgroundFill;
 import javafx.scene.layout.BorderPane;
@@ -18,6 +19,9 @@ import java.util.Date;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) {
+
+
+
         // Создаем метку для отображения времени
         Label timeLabel = new Label();
         timeLabel.setStyle("-fx-font-size: 48;"); // Устанавливаем размер шрифта
@@ -54,6 +58,9 @@ public class HelloApplication extends Application {
 
         // Устанавливаем сцену на Stage (окно приложения)
         stage.setScene(scene);
+
+        Image icon = new Image(getClass().getResourceAsStream("/agile_preferences_release_management_configuration_automation_development_devops_icon_261692.ico"));
+        stage.getIcons().add(icon);
 
         // Показываем окно приложения
         stage.show();
